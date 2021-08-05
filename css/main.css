@@ -15,6 +15,7 @@ html {
   color: #222;
   font-size: 1em;
   line-height: 1.4;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 /*
@@ -86,6 +87,26 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+
+h1,
+h2,
+h3,
+h4,
+.slogan {
+  font-family: 'BenchNine', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h1.xl {
+  font-size: 4.5em;
+  margin: 0.67em 0 0.372222em 0;
+}
+
+.slogan {
+  font-size: 1.5em;
+}
+
 
 /* ==========================================================================
    Helper classes
