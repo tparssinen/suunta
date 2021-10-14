@@ -15,7 +15,31 @@ html {
   color: #222;
   font-size: 1em;
   line-height: 1.4;
-  font-family: 'Noto Sans JP', sans-serif;
+  text-align: center;
+}
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 400;
+  font-display: optional;
+}
+
+header,
+.content,
+.content--narrow {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: left;
+}
+
+header,
+.content {
+  max-width: 1600px;
+}
+
+.content--narrow {
+  max-width: 1200px;
 }
 
 /*
@@ -92,6 +116,7 @@ h1,
 h2,
 h3,
 h4,
+.title,
 .slogan {
   font-family: 'BenchNine', sans-serif;
   font-weight: 700;
@@ -103,10 +128,20 @@ h1.xl {
   margin: 0.67em 0 0.372222em 0;
 }
 
+.title {
+  font-size: 2.5em;
+}
+
 .slogan {
   font-size: 1.5em;
 }
 
+.hero {
+  background-image: url(../img/nsplsh.webp);
+  background-size: cover;
+  width: 100%;
+  min-height: 33em;
+}
 
 /* ==========================================================================
    Helper classes

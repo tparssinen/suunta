@@ -12,10 +12,6 @@
   <meta property="og:url" content="">
   <meta property="og:image" content="">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=BenchNine:wght@700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
-
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
@@ -24,17 +20,47 @@
   <link rel="stylesheet" href="css/main.css">
 
   <meta name="theme-color" content="#056839">
+
+  <link rel="preload" as="image" href="img/nsplsh.webp">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=BenchNine:wght@700&family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+    body {font-family: 'Noto Sans', sans-serif; font-weight: 400; font-display: optional;}
+    .title, .slogan {font-family: 'BenchNine', sans-serif; font-weight: 700; font-display: optional;}
+  </style>
 </head>
 
 <body>
+  <!-- Header -->
+  <header>
+    <div class="brand">
+      <div class="logo">
+        <a href="/">
+          <img src="img/suunta.svg" width="200" height="108" alt="Markkinointi Suunta Oy">
+        </a>
+      </div>
+      <div class="title">Markkinointi Suunta Oy</div>
+      <div class="slogan">Yhdessä oikeaan suuntaan</div>
+    </div>
+    <nav>
+      <a href="/">Etusivu</a>
+      <a href="/">Meistä</a>
+      <a href="/">Palvelumme</a>
+      <a href="/">Ota yhteyttä</a>
+      <a href="/">Usein kysyttyä</a>
+    </nav>
+  </header>
 
   <!-- Page content -->
-  <h1 class="xl">Markkinointi Suunta Oy</h1>
-  <p class="slogan">Yhdessä oikeaan suuntaan</p>
-  <h2>Header 2</h2>
-  <p>Lorem ipsum dolor sit amet</p>
-  <h3>Header 3</h3>
-  <h4>Header 4</h4>
+  <div class="hero">
+  </div>
+  <div class="content">
+    <h1 class="xl">Markkinointi Suunta Oy</h1>
+    <p class="slogan">Yhdessä oikeaan suuntaan</p>
+    <h2>Header 2</h2>
+    <p>Lorem ipsum dolor sit amet</p>
+    <h3>Header 3</h3>
+    <h4>Header 4</h4>
+  </div>
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
