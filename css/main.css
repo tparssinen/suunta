@@ -14,6 +14,7 @@
 html {
   color: #222;
   font-size: 1em;
+  height: 100%;
   line-height: 1.4;
   text-align: center;
 }
@@ -50,6 +51,7 @@ header,
   background-color: white;
   margin-right: auto;
   margin-left: auto;
+  margin-bottom: 5rem;
 }
 
 .content,
@@ -132,6 +134,13 @@ textarea {
 /* ==========================================================================
    Body
    ========================================================================== */
+
+body {
+  min-height: 100%;
+  padding-bottom: 250px;
+  position: relative;
+  box-sizing: border-box;
+}
 
 body .hero {
   min-height: 16.5em;
@@ -217,6 +226,21 @@ header nav {
     grid-row: 2 / 3;
     justify-self: center;
   }
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+footer {
+  background-color: #056839;
+  color: white;
+  position: absolute;
+  height: 250px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
 }
 
 /* ==========================================================================
