@@ -37,8 +37,8 @@ header,
 header,
 .content,
 .content--narrow {
-  padding-right: 3rem;
-  padding-left: 3rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 header,
@@ -63,6 +63,15 @@ header,
   margin-right: auto;
   margin-left: auto;
   max-width: 1200px;
+}
+
+@media screen and (min-width: 681px) {
+  header,
+  .content,
+  .content--narrow {
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
 }
 
 /*
