@@ -22,23 +22,44 @@ body {
   font-family: 'Noto Sans', sans-serif;
   font-weight: 400;
   font-display: optional;
+  text-align: center;
+}
+
+header,
+.content-wrapper,
+.content,
+.content--narrow {
+  margin-right: auto;
+  margin-left: auto;
 }
 
 header,
 .content,
 .content--narrow {
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  text-align: left;
+  padding-right: 3rem;
+  padding-left: 3rem;
 }
 
 header,
-.content {
+.content-wrapper {
   max-width: 1600px;
+  width: 100%;
+}
+
+.content-wrapper {
+  background-color: white;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.content,
+.content--narrow {
+  text-align: left;
 }
 
 .content--narrow {
+  margin-right: auto;
+  margin-left: auto;
   max-width: 1200px;
 }
 
@@ -109,6 +130,42 @@ textarea {
 }
 
 /* ==========================================================================
+   Body
+   ========================================================================== */
+
+body .hero {
+  min-height: 16.5em;
+}
+
+@media screen and (min-width: 1025px) {
+  body .hero {
+    min-height: 24em;
+  }
+}
+
+@media screen and (min-width: 1640px) {
+  body {
+    display: grid;
+    grid-template-rows: min-content 10rem auto auto;
+  }
+
+  body header {
+    grid-column: 1 / 2;
+  }
+
+  body .hero {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+    min-height: 33em;
+  }
+
+  body .content-wrapper {
+    grid-column: 1 / 2;
+    grid-row: 3 / 5;
+  }
+}
+
+/* ==========================================================================
    Header
    ========================================================================== */
 
@@ -118,7 +175,10 @@ header {
 
 header .logo a {
   display: inline-block;
-  margin: 1rem 0;
+}
+
+header .logo img {
+  transform: scale(0.5);
 }
 
 header nav {
@@ -135,6 +195,14 @@ header nav {
   header .logo {
     grid-column: 1 / 2;
     grid-row: 1 / 3;
+  }
+
+  header .logo a {
+    margin: 1rem 0;
+  }
+
+  header .logo img {
+    transform: scale(1);
   }
 
   header .title {
@@ -166,11 +234,6 @@ h4,
   text-transform: uppercase;
 }
 
-h1.xl {
-  font-size: 4.5em;
-  margin: 0.67em 0 0.372222em 0;
-}
-
 .title {
   font-size: 2.5em;
 }
@@ -179,11 +242,39 @@ h1.xl {
   font-size: 1.5em;
 }
 
+.lead {
+  font-size: 1.25em;
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 1025px) {
+  h1.xl {
+    font-size: 4.5em;
+    margin: 0.67em 0 0.372222em 0;
+  }
+
+  .lead {
+    font-size: 1.5em;
+  }
+}
+
 .hero {
   background-image: url(../img/nsplsh.webp);
   background-size: cover;
   width: 100%;
-  min-height: 33em;
+  min-height: 16.5em;
+}
+
+@media screen and (min-width: 1025px) {
+  .hero {
+    min-height: 24em;
+  }
+}
+
+@media screen and (min-width: 1640px) {
+  .hero {
+    min-height: 33em;
+  }
 }
 
 /* ==========================================================================
