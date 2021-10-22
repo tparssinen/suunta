@@ -26,23 +26,27 @@ body {
   text-align: center;
 }
 
-header,
+.header-inner,
 .content-wrapper,
 .content,
-.content--narrow {
+.content--narrow,
+.contact-wrapper form {
   margin-right: auto;
   margin-left: auto;
 }
 
-header,
+.header-inner,
 .content,
-.content--narrow {
+.content--narrow,
+.contact-wrapper form {
+  box-sizing: border-box;
   padding-right: 1rem;
   padding-left: 1rem;
 }
 
-header,
-.content-wrapper {
+.header-inner,
+.content-wrapper,
+.contact-wrapper form {
   max-width: 1600px;
   width: 100%;
 }
@@ -55,18 +59,21 @@ header,
 }
 
 .content,
-.content--narrow {
+.content--narrow,
+.contact-wrapper h2 {
   text-align: left;
 }
 
-.content--narrow {
+.content--narrow,
+.contact-wrapper h2,
+.contact-wrapper .form-fields {
   margin-right: auto;
   margin-left: auto;
   max-width: 1200px;
 }
 
 @media screen and (min-width: 681px) {
-  header,
+  .header-inner,
   .content,
   .content--narrow {
     padding-right: 3rem;
@@ -188,6 +195,8 @@ body .hero {
    ========================================================================== */
 
 header {
+  box-shadow:  0 0 50px rgba(0,0,0,.5);
+  position: relative;
   text-align: center;
 }
 
@@ -196,7 +205,17 @@ header .logo a {
 }
 
 header .logo img {
-  transform: scale(0.5);
+  transform: scale(0.75);
+}
+
+header .title {
+  line-height: 1;
+}
+
+header .slogan {
+  color:  #007236;
+  letter-spacing: .05em;
+  padding-bottom: 1.5rem;
 }
 
 header nav {
@@ -206,6 +225,7 @@ header nav {
 @media screen and (min-width: 1025px) {
   header .brand {
     display: grid;
+    grid-column-gap: 3rem;
     grid-template-columns: min-content auto;
     grid-template-rows: auto auto auto;
   }
@@ -224,16 +244,17 @@ header nav {
   }
 
   header .title {
-    grid-column: 1 / 3;
+    grid-column: 2 / 3;
     grid-row: 1 / 2;
     align-self: end;
-    justify-self: center;
+    justify-self: start;
   }
 
   header .slogan {
-    grid-column: 1 / 3;
+    grid-column: 2 / 3;
     grid-row: 2 / 3;
-    justify-self: center;
+    justify-self: start;
+    padding-bottom: 0;
   }
 }
 
@@ -348,6 +369,48 @@ footer {
     grid-column: 1 / 2;
     grid-row: auto;
   }
+}
+
+/* ==========================================================================
+   Contact form
+   ========================================================================== */
+
+.contact-wrapper {
+  background-color: #eee;
+  padding: 3rem 0;
+}
+
+.contact-wrapper h3 {
+  grid-column: 1 / 3;
+  text-align: left;
+}
+
+.contact-wrapper .form-fields {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 50% 50%;
+}
+
+.contact-wrapper input[type=text],
+.contact-wrapper input[type=phone],
+.contact-wrapper input[type=email],
+.contact-wrapper textarea {
+  padding: 0.5rem;
+}
+
+.contact-wrapper .form-selection,
+.contact-wrapper textarea {
+  grid-column: 1 / 3;
+  text-align: left;
+}
+
+.contact-wrapper .form-selection {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+}
+
+.contact-wrapper .form-action {
+  text-align: left;
 }
 
 /* ==========================================================================
