@@ -32,14 +32,16 @@
 <body>
   <!-- Header -->
   <header>
-    <div class="brand">
-      <div class="logo">
-        <a href="/">
-          <img src="img/suunta.svg" width="200" height="108" alt="Markkinointi Suunta Oy">
-        </a>
+    <div class="header-inner">
+      <div class="brand">
+        <div class="logo">
+          <a href="/">
+            <img src="img/suunta_logo.svg" width="128" height="128" alt="Markkinointi Suunta Oy">
+          </a>
+        </div>
+        <div class="title">Markkinointi Suunta Oy</div>
+        <div class="slogan">Yhdessä oikeaan suuntaan</div>
       </div>
-      <div class="title">Markkinointi Suunta Oy</div>
-      <div class="slogan">Yhdessä oikeaan suuntaan</div>
     </div>
     <!-- <nav>
       <a href="/">Etusivu</a>
@@ -95,7 +97,57 @@
           </div>
         </div>
       </div>
+      <hr>
+      <h3>Verkkosivut</h3>
+      <div class="card-wrapper">
+        <div class="card">
+          <div class="card-image"><img src="img/card_www.webp" alt=""></div>
+          <div class="card-text">
+            <h4>Yrityksen verkkosivut</h4>
+            <p class="lead">Mobiilioptimoidut verkkosivut yritykselle</p>
+            <p>Googlen markkinointi kanavat ovat yrityksen tärkeimpiä kanavia löydettävyyteen, näkyvyyteen sekä sivustolle uudelleen ohjaukseen. Mikä olisikaan paras alusta, kuin maailman käytetyin hakukone!</p>
+          </div>
+          <div class="card-cta">
+            <a class="button">Lue lisää</a>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+  <div class="contact-wrapper">
+    <form>
+      <h2>Ota yhteyttä</h2>
+      <div class="form-fields">
+        <h3>Olen kiinnostunut:</h3>
+        <div class="form-selection">
+          <label>
+            <input type="checkbox">
+            Google Ads
+          </label>
+          <label>
+            <input type="checkbox">
+            Some
+          </label>
+          <label>
+            <input type="checkbox">
+            Natiivimainonta
+          </label>
+          <label>
+            <input type="checkbox">
+            Verkkosivut
+          </label>
+        </div>
+        <h3>Yhteystiedot:</h3>
+        <input type="text" placeholder="Nimi *" id="contact-name" required>
+        <input type="text" placeholder="Yritys *" id="contact-company" required>
+        <input type="phone" placeholder="Puhelinnumero *" id="contact-phone" required>
+        <input type="email" placeholder="Sähköpostiosoite *" id="contact-email" required>
+        <textarea name="contact-text" id="contact-text" cols="30" rows="10" placeholder="Lisätietoa"></textarea>
+        <div class="form-action">
+          <input type="submit" class="button" value="Lähetä">
+        </div>
+      </div>
+    </form>
   </div>
   <footer>
     <div class="footer-content">
