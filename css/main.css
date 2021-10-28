@@ -41,16 +41,14 @@ body {
 
 .header-inner,
 .content,
-.content--narrow,
-.contact-wrapper form {
+.content--narrow {
   box-sizing: border-box;
   padding-right: 1rem;
   padding-left: 1rem;
 }
 
 .header-inner,
-.content-wrapper,
-.contact-wrapper form {
+.content-wrapper {
   max-width: 1280px;
   width: 100%;
 }
@@ -69,11 +67,10 @@ body {
 }
 
 .content--narrow,
-.contact-wrapper h2,
-.contact-wrapper .form-fields {
+.contact-wrapper h2 {
   margin-right: auto;
   margin-left: auto;
-  max-width: 1200px;
+  max-width: 1040px;
 }
 
 @media screen and (min-width: 681px) {
@@ -392,7 +389,7 @@ footer {
 .contact-wrapper .form-fields {
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 1fr 1fr;
 }
 
 .contact-wrapper input[type=text],
