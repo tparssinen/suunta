@@ -112,7 +112,7 @@
     </div>
   </div>
   <div class="contact-wrapper">
-    <form class="content--narrow">
+    <form id="contactForm" class="content--narrow">
       <a name="yhteydenotto">
         <h2>Ota yhteyttä</h2>
       </a>
@@ -120,30 +120,30 @@
         <h3>Olen kiinnostunut:</h3>
         <div class="form-selection">
           <label>
-            <input type="checkbox">
+            <input type="checkbox" name="interestGoogleAds" value="0">
             Google Ads
           </label>
           <label>
-            <input type="checkbox">
+            <input type="checkbox" name="interestSome" value="0">
             Some
           </label>
           <label>
-            <input type="checkbox">
+            <input type="checkbox" name="interestNative" value="0">
             Natiivimainonta
           </label>
           <label>
-            <input type="checkbox">
+            <input type="checkbox" name="interestWebsite" value="0">
             Verkkosivut
           </label>
         </div>
         <h3>Yhteystiedot:</h3>
-        <input type="text" placeholder="Nimi *" id="contact-name" required>
-        <input type="text" placeholder="Yritys *" id="contact-company" required>
-        <input type="phone" placeholder="Puhelinnumero *" id="contact-phone" required>
-        <input type="email" placeholder="Sähköpostiosoite *" id="contact-email" required>
-        <textarea name="contact-text" id="contact-text" cols="30" rows="10" placeholder="Lisätietoa"></textarea>
+        <input type="text" placeholder="Nimi *" id="contact-name" name="contactName" required>
+        <input type="text" placeholder="Yritys *" id="contact-company" name="contactCompany" required>
+        <input type="phone" placeholder="Puhelinnumero *" id="contact-phone" name="contactPhone" required>
+        <input type="email" placeholder="Sähköpostiosoite *" id="contact-email" name="contactEmail" required>
+        <textarea name="additionalText" name="additionalText" id="contact-text" cols="30" rows="10" placeholder="Lisätietoa"></textarea>
         <div class="form-action">
-          <button id="contact-send" class="button">Lähetä</button>
+          <button id="contactSend" class="button">Lähetä</button>
         </div>
       </div>
     </form>
