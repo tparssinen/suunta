@@ -93,7 +93,8 @@ abbr[title] {
  */
 
 b,
-strong {
+strong,
+.strong {
   font-weight: bolder;
 }
 

@@ -73,6 +73,10 @@ body {
   max-width: 1040px;
 }
 
+.strong a {
+  color: black;
+}
+
 @media screen and (min-width: 681px) {
   .header-inner,
   .content,
@@ -352,6 +356,9 @@ footer {
 @media screen and (min-width: 1025px) {
   .card-wrapper {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .card-wrapper.card-wrapper--subpage {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .card {
