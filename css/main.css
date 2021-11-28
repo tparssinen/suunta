@@ -160,16 +160,10 @@ body {
 }
 
 body .hero {
-  min-height: 16.5em;
+  min-height: 10rem;
 }
 
 @media screen and (min-width: 1025px) {
-  body .hero {
-    min-height: 24em;
-  }
-}
-
-@media screen and (min-width: 1640px) {
   body {
     display: grid;
     grid-template-rows: min-content 10rem auto auto;
@@ -182,7 +176,7 @@ body .hero {
   body .hero {
     grid-column: 1 / 2;
     grid-row: 2 / 4;
-    min-height: 33em;
+    min-height: 24em;
   }
 
   body .content-wrapper {
@@ -466,21 +460,21 @@ h3 {
 }
 
 .hero {
-  background-image: url(../img/nsplsh.webp);
-  background-size: cover;
+  background-image: url(../img/hero_bg_1680_lo.webp);
+  background-repeat: no-repeat;
+  background-size: 150%;
   width: 100%;
-  min-height: 16.5em;
+}
+
+@media screen and (min-width: 681px) {
+  .hero {
+    background-size: cover;
+  }
 }
 
 @media screen and (min-width: 1025px) {
   .hero {
-    min-height: 24em;
-  }
-}
-
-@media screen and (min-width: 1640px) {
-  .hero {
-    min-height: 33em;
+    background-size: contain;
   }
 }
 
