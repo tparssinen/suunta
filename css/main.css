@@ -306,6 +306,7 @@ footer {
 .card-image img {
   margin-bottom: 2rem;
   width: 100%;
+  height: auto;
 }
 
 .card-text,
