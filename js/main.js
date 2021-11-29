@@ -34,7 +34,9 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function emailSent() {
-
+    const msg = document.getElementById('contactSentMessage');
+    msg.classList.remove('hidden');
+    msg.classList.add('visible');
   }
 
   function sendData(data) {

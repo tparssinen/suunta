@@ -381,6 +381,7 @@ footer {
 .contact-wrapper {
   background-color: #eee;
   padding: 2rem 0 3rem 0;
+  position: relative;
 }
 
 .contact-wrapper h3 {
@@ -415,6 +416,27 @@ footer {
 .contact-wrapper .form-action {
   text-align: left;
 }
+
+.contact-wrapper .message {
+  background-color: #eee;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity .3s linear;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.contact-wrapper .message.visible {
+  opacity: 1;
+}
+
 
 /* ==========================================================================
    Author's custom styles
