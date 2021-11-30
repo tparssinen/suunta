@@ -30,8 +30,8 @@ body {
   text-align: center;
 }
 
+nav,
 .header-inner,
-.content-wrapper,
 .content,
 .content--narrow,
 .contact-wrapper form {
@@ -39,6 +39,7 @@ body {
   margin-left: auto;
 }
 
+nav,
 .header-inner,
 .content,
 .content--narrow {
@@ -47,6 +48,7 @@ body {
   padding-left: 1rem;
 }
 
+nav,
 .header-inner,
 .content-wrapper {
   max-width: 1280px;
@@ -217,10 +219,6 @@ header .slogan {
   padding-bottom: 1.5rem;
 }
 
-header nav {
-  margin-top: 1rem;
-}
-
 @media screen and (min-width: 1025px) {
   header .brand {
     display: grid;
@@ -254,6 +252,50 @@ header nav {
     grid-row: 2 / 3;
     justify-self: start;
     padding-bottom: 0;
+  }
+}
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+
+header nav {
+  display: grid;
+  grid-gap: .5rem;
+  grid-template-columns: repeat(5, auto);
+}
+
+header nav a {
+  display: inline-block;
+  color: black;
+  font-size: .8rem;
+  font-weight: bold;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  letter-spacing: -0.5px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+header nav a.selected {
+  box-shadow: 0 -5px #056839 inset;
+}
+
+@media screen and (min-width: 681px) {
+  header nav {
+    grid-gap: 1rem;
+  }
+
+  header nav a {
+    font-size: 1rem;
+    letter-spacing: 0px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  header nav {
+    grid-gap: 3rem;
+    justify-content: center;
   }
 }
 
@@ -506,6 +548,29 @@ h3 {
   background-repeat: no-repeat;
   background-size: 150%;
   width: 100%;
+}
+
+.hero.hero--subpage {
+  background-image: url(../img/hero_bg_1680_subpage_lo.webp);
+}
+
+.hero.hero--some {
+  background-image: url(../img/hero_bg_1680_some_lo.webp);
+}
+
+.hero.hero--www {
+  background-image: url(../img/hero_bg_1680_www_lo.webp);
+}
+
+.hero.hero--google-ads {
+  background-image: url(../img/hero_bg_1680_gads_lo.webp);
+  background-position: center;
+}
+
+@media screen and (min-width: 1025px) {
+  .hero.hero--google-ads {
+    background-position: top;
+  }
 }
 
 @media screen and (min-width: 681px) {
