@@ -263,12 +263,13 @@ header nav {
   display: grid;
   grid-gap: .5rem;
   grid-template-columns: repeat(5, auto);
+  white-space: nowrap;
 }
 
 header nav a {
   display: inline-block;
   color: black;
-  font-size: .8rem;
+  font-size: .7rem;
   font-weight: bold;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -441,7 +442,9 @@ footer {
 .contact-wrapper input[type=phone],
 .contact-wrapper input[type=email],
 .contact-wrapper textarea {
+  box-sizing: border-box;
   padding: 0.5rem;
+  width: 100%;
 }
 
 .contact-wrapper .form-selection,
