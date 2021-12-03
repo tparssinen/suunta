@@ -60,6 +60,7 @@ nav,
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 5rem;
+  z-index: 1;
 }
 
 .content,
@@ -166,7 +167,10 @@ body {
 }
 
 body .hero {
-  min-height: 10rem;
+  height: 160px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
 }
 
 @media screen and (min-width: 1025px) {
@@ -182,6 +186,7 @@ body .hero {
   body .hero {
     grid-column: 1 / 2;
     grid-row: 2 / 4;
+    height: auto;
     min-height: 24em;
   }
 
@@ -288,7 +293,7 @@ header nav a.selected {
   }
 
   header nav a {
-    font-size: 1rem;
+    font-size: .85rem;
     letter-spacing: 0px;
   }
 }
@@ -297,6 +302,10 @@ header nav a.selected {
   header nav {
     grid-gap: 3rem;
     justify-content: center;
+  }
+
+  header nav a {
+    font-size: 1rem;
   }
 }
 
@@ -546,45 +555,24 @@ h3 {
   }
 }
 
-.hero {
-  background-image: url(../img/hero_bg_1680_lo.webp);
-  background-repeat: no-repeat;
-  background-size: 150%;
-  width: 100%;
-}
-
-.hero.hero--subpage {
-  background-image: url(../img/hero_bg_1680_subpage_lo.webp);
-}
-
-.hero.hero--some {
-  background-image: url(../img/hero_bg_1680_some_lo.webp);
-}
-
-.hero.hero--www {
-  background-image: url(../img/hero_bg_1680_www_lo.webp);
-}
-
-.hero.hero--google-ads {
-  background-image: url(../img/hero_bg_1680_gads_lo.webp);
-  background-position: center;
-}
-
-@media screen and (min-width: 1025px) {
-  .hero.hero--google-ads {
-    background-position: top;
+@media screen and (max-width: 1280px) {
+  .hero.hero--google-ads picture,
+  .hero.hero--google-ads img,
+  .hero.hero--some picture,
+  .hero.hero--some img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
-@media screen and (min-width: 681px) {
-  .hero {
-    background-size: cover;
-  }
-}
-
-@media screen and (min-width: 1025px) {
-  .hero {
-    background-size: contain;
+@media screen and (min-width: 1281px) {
+  .hero picture,
+  .hero img {
+    width: 100%;
+    object-fit: cover;
+    object-position: left;
   }
 }
 
@@ -599,6 +587,12 @@ h3 {
 .hidden,
 [hidden] {
   display: none !important;
+}
+
+@media screen and (max-width: 680px) {
+  .visible-medium {
+    display: none !important;
+  }
 }
 
 /*
